@@ -10,10 +10,10 @@ var express = require('express');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var etsyjs = require('etsy-js');
-var secret = require('./secret.js');
+var info = require('./info.js');
 var client = etsyjs.client({
-    key: secret.key,
-    secret: secret.secret,
+    key: info.key,
+    secret: info.secret,
     callbackURL: 'http://localhost:3000/authorize'
 });
 

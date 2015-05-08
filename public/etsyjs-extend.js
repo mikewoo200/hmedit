@@ -1,9 +1,11 @@
 var server = require('../server.js');
+var info = require('../info.js');
 var etsyjs = server.etsyjs;
+var shop = info.shop;
 
 (function() {
     etsyjs.shop.prototype.findAllShopSections = function(cb) {
-        return this.client.get('/shops/hingmade/sections/', function(err, status, body, headers) {
+        return this.client.get('/shops/' + shop + '/sections/', function(err, status, body, headers) {
             if (err) {
                 return cb(err);
             }
@@ -16,7 +18,7 @@ var etsyjs = server.etsyjs;
     };
 
     etsyjs.listing.prototype.findAllListings = function(page, limit, cb) {
-        return this.client.get('/shops/hingmade/listings/active/', {page: page, limit: limit, includes: 'Images(listing_image_id,url_75x75,url_fullxfull)'}, function(err, status, body, headers) {
+        return this.client.get('/shops/' + shop + '/listings/active/', {page: page, limit: limit, includes: 'Images(listing_image_id,url_75x75,url_fullxfull)'}, function(err, status, body, headers) {
             if (err) {
                 return cb(err);
             }
@@ -29,7 +31,7 @@ var etsyjs = server.etsyjs;
     };
 
     etsyjs.listing.prototype.findAllShopSectionListings = function(page, limit, shopSectionId, cb) {
-        return this.client.get('/shops/hingmade/sections/' + shopSectionId + '/listings/active', {page: page, limit: limit, includes: 'Images(listing_image_id,url_75x75,url_fullxfull)'}, function(err, status, body, headers) {
+        return this.client.get('/shops/' + shop + '/sections/' + shopSectionId + '/listings/active', {page: page, limit: limit, includes: 'Images(listing_image_id,url_75x75,url_fullxfull)'}, function(err, status, body, headers) {
             if (err) {
                 return cb(err);
             }
