@@ -1,0 +1,27 @@
+{
+  "name": "HMEdit",
+  "version": "0.0.0",
+  "description": "HM app to edit listings",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~2.5.11",
+    "oauth": "~0.9.7",
+    "etsy-js": "0.0.5",
+    "express-session": "^1.6.4",
+    "cookie-parser": "^1.3.2",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "oauth",
+    "etsy"
+  ],
+  "author": "HM"
+}

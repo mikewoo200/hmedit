@@ -1,0 +1,18 @@
+{#data}
+    <div class="wrapper" data-listing-id="{listing_id}">
+        <div class="checkbox"></div>
+        <div class="listing-title">{$idx} {title|s}</div>
+        <div class="img hide-not-first" data-selected="">
+        {#Images}
+            <img src="{url_75x75}" data-index="{$idx}" title="{url_75x75}"/>
+        {/Images}
+        <div class="img-selected-id"></div>
+        </div>
+        <div class="listing-id">Listing Id: {listing_id}</div>
+        <div class="price-wrap">
+            Price: $<input class="price" value="{price}" /><span class="original">(Original: ${price})</span>
+        </div>
+        <input class="title" value="{title|s}" />
+        <textarea class="description">{description|s}</textarea>
+    </div>
+{/data}
