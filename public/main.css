@@ -163,7 +163,9 @@
     margin-right: 10px;
     border: 1px solid #ccc;
 }
-.title {
-    width: 80%;
+.title, .category_id, .tags {
     display: none;
+}
+.title, .tags {
+    width: 80%;
 }

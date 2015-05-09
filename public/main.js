@@ -107,7 +107,7 @@ var clearUI = function() {
     $('.wrapper').removeClass('updated');
     $('.find-replace-wrapper, .update-price-wrapper').addClass('hide');
     $('.update-color-chart-wrapper, .update-listing').addClass('hide');
-    $('.price-wrap, .title, .description').hide();
+    $('.price-wrap, .title, .description, .category_id, .tags').hide();
     $('.img').addClass('hide-not-first').find('img').removeClass('sel');
     $('.img-selected-id').empty();
 };
@@ -264,6 +264,8 @@ $('.operation-select').on('change', function(e) {
         $colorChart = $('.update-color-chart-wrapper'),
         $listing = $('.update-listing'),
         $priceWrap = $('.price-wrap'),
+        $category = $('.category_id'),
+        $tags = $('.tags'),
         $descriptionTextArea = $('.description'),
         $title = $('.title'),
         $img = $('.wrapper .img');
@@ -285,6 +287,14 @@ $('.operation-select').on('change', function(e) {
         $colorChart.removeClass('hide');
         $img.removeClass('hide-not-first');
         guessAndSelectedColorChartRank();
+    } else if (val === 'op-category_id') {
+        $find.removeClass('hide');
+        $listing.removeClass('hide');
+        $category.show();
+    } else if (val === 'op-tags') {
+        $find.removeClass('hide');
+        $listing.removeClass('hide');
+        $tags.show();
     } else {
         reset();
     }

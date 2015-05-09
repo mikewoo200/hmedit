@@ -13,6 +13,8 @@
             Price: $<input class="price" value="{price}" /><span class="original">(Original: ${price})</span>
         </div>
         <input class="title" value="{title|s}" />
+        <input class="category_id" value="{category_id}" />
+        <textarea class="tags">{tags}</textarea>
         <textarea class="description">{description|s}</textarea>
     </div>
 {/data}
