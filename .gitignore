@@ -1,3 +1,6 @@
 node_modules
+node_modulesOldWorkingDoNotDelete
+.DS_Store
+**/.DS_Store
 notes.txt
 info.js
