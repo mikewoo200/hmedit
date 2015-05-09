@@ -107,7 +107,7 @@ var clearUI = function() {
     $('.wrapper').removeClass('updated');
     $('.find-replace-wrapper, .update-price-wrapper').addClass('hide');
     $('.update-color-chart-wrapper, .update-listing').addClass('hide');
-    $('.price-wrap, .title, .description, .category_id, .tags').hide();
+    $('.price-wrap, .title, .description, .category_id, .title-count-wrap, .tag-count-wrap, .tags').hide();
     $('.img').addClass('hide-not-first').find('img').removeClass('sel');
     $('.img-selected-id').empty();
 };
@@ -265,9 +265,9 @@ $('.operation-select').on('change', function(e) {
         $listing = $('.update-listing'),
         $priceWrap = $('.price-wrap'),
         $category = $('.category_id'),
-        $tags = $('.tags'),
+        $tags = $('.tags, .tag-count-wrap'),
         $descriptionTextArea = $('.description'),
-        $title = $('.title'),
+        $title = $('.title, .title-count-wrap'),
         $img = $('.wrapper .img');
 
     clearUI();
@@ -288,11 +288,9 @@ $('.operation-select').on('change', function(e) {
         $img.removeClass('hide-not-first');
         guessAndSelectedColorChartRank();
     } else if (val === 'op-category_id') {
-        $find.removeClass('hide');
         $listing.removeClass('hide');
         $category.show();
     } else if (val === 'op-tags') {
-        $find.removeClass('hide');
         $listing.removeClass('hide');
         $tags.show();
     } else {
@@ -309,6 +307,34 @@ $('.change-price').on('click', function() {
 $('.update-listing').on('click', function(e) {
     update(e);
 });
+$('.listings').on('click keyup', '.title', function(e) {
+    var $target = $(e.target),
+        $count = $target.closest('.wrapper').find('.title-count'),
+        count = $target.val().length,
+        TOO_MANY = 'too-many';
+    $count.removeClass(TOO_MANY).text(count);
+    if (count > 140) {
+        $count.addClass(TOO_MANY);
+    }
+});
+
+$('.listings').on('click keyup', '.tags', function(e) {
+    var $target = $(e.target),
+        $count = $target.closest('.wrapper').find('.tag-count'),
+        count = $target.val().split(',').length,
+        TOO_MANY = 'too-many',
+        JUST_RIGHT = 'just-right',
+        NOT_ENOUGH = 'not-enough';
+    $count.removeClass(TOO_MANY + ' ' + JUST_RIGHT + ' ' + NOT_ENOUGH).text(count);
+    if (count === 13) {
+        $count.addClass(JUST_RIGHT);
+    } else if (count > 13) {
+        $count.addClass(TOO_MANY);
+    } else if (count < 13) {
+        $count.addClass(NOT_ENOUGH);
+    }
+});
+
 $('.update-color-chart-wrapper').on('click', function(e) {
     update(e);
 });

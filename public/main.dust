@@ -12,8 +12,10 @@
         <div class="price-wrap">
             Price: $<input class="price" value="{price}" /><span class="original">(Original: ${price})</span>
         </div>
+        <div class="title-count-wrap" style="display:none">Title char count: <span class="title-count"></span></div>
         <input class="title" value="{title|s}" />
         <input class="category_id" value="{category_id}" />
+        <div class="tag-count-wrap" style="display:none">Tag count: <span class="tag-count"></span></div>
         <textarea class="tags">{tags}</textarea>
         <textarea class="description">{description|s}</textarea>
     </div>

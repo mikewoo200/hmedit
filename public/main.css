@@ -169,3 +169,15 @@
 .title, .tags {
     width: 80%;
 }
+.tag-count, .title-count {
+    font-weight: 700;
+}
+.tag-count.too-many, .title-count.too-many {
+    color: red;
+}
+.tag-count.just-right {
+    color: green;
+}
+.tag-count.not-enough {
+    color: pink;
+}
