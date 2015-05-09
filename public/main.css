@@ -154,8 +154,9 @@
     box-align: center;
 }
 .spinner-wrapper {
-    position: relative;
-    top: 100px;
+    position: fixed;
+    top: 400px;
+    z-index: 1;
 }
 .spinner {
     display: none;
