@@ -1,3 +1,12 @@
+.header {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+}
 .wrapper {
     border: 3px solid #ccc;
     margin-top: 20px;
@@ -9,10 +18,12 @@
 .wrapper.updated {
     border-color: red;
 }
-.header, .re-auth, .action-wrapper, .listings {
-    margin-left: 20px;
+.listings {
+    position: relative;
+    top: 200px;
+    padding-left: 20px;
 }
-.header {
+.avatar-wrap {
     margin-bottom: 20px;
 }
 .app-name {

@@ -5,47 +5,49 @@
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
-        <a class="re-auth" href="/">Re-auth</a>
         <div class="header">
-            <img src="https://img1.etsystatic.com/000/0/10697635/iusa_75x75.8844189.jpg" />
-            <div class="app-name">Hingmade Edit</div>
-        </div>
-        <div class="action-wrapper">
-            <button class="btn btn-primary get-all-listings">Get All Listings</button>            <div class="dropdown shop-sections-wrapper">
-                <button class="btn btn-default dropdown-toggle" type="button" id="shop-sections" data-toggle="dropdown">
-                    <span class="shop-section-0">Shop Sections</span>
-                    <span class="caret"></span>
-                </button>            
-                <ul class="dropdown-menu shop-sections" role="menu" aria-labelledby="shop-sections">
-                    <div class="spinner show"></div>
-                </ul>
+            <a class="re-auth" href="/">Re-auth</a>
+            <div class="avatar-wrap">
+                <img src="https://img1.etsystatic.com/000/0/10697635/iusa_75x75.8844189.jpg" />
+                <div class="app-name">Hingmade Edit</div>
             </div>
-            <select class="operation-select">
-                <option value='0'>Update Operation</div>
-                <option value='op-title'>Title</div>
-                <option value='op-description'>Description</div>
-                <option value="op-price">Price</div>
-                <option value="op-image">Color chart</div>
-                <option value="op-category_id">Category</div>
-                <option value="op-tags">Tags</div>
-            </select>
-            <div class="update-price-wrapper hide">
-                <select class="update-price-select">
-                    <option value='increase'>Increase</div>
-                    <option value="decrease">Decrease</div>
+            <div class="action-wrapper">
+                <button class="btn btn-primary get-all-listings">Get All Listings</button>            <div class="dropdown shop-sections-wrapper">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="shop-sections" data-toggle="dropdown">
+                        <span class="shop-section-0">Shop Sections</span>
+                        <span class="caret"></span>
+                    </button>            
+                    <ul class="dropdown-menu shop-sections" role="menu" aria-labelledby="shop-sections">
+                        <div class="spinner show"></div>
+                    </ul>
+                </div>
+                <select class="operation-select">
+                    <option value='0'>Update Operation</div>
+                    <option value='op-title'>Title</div>
+                    <option value='op-description'>Description</div>
+                    <option value="op-price">Price</div>
+                    <option value="op-image">Color chart</div>
+                    <option value="op-category_id">Category</div>
+                    <option value="op-tags">Tags</div>
                 </select>
-                by $<input class="update-price-by" value="5" />
-                <button class="btn btn-primary change-price">Change price</button>
-            </div>
-            <div class="find-replace-wrapper hide">
-                Find: <input class="find" value="** 6 **">
-                Replace: <input class="replace" value="** 7 **">
-                <button class="btn btn-primary go-replace">Go Replace</button>
-            </div>
-            <button class="btn btn-primary update-listing hide">Update Listing</button>
-            <div class="update-color-chart-wrapper hide">
-                Color chart id: <input class="color-chart-id" value="497105148">
-                <button class="btn btn-primary update-color-chart">Update color chart</button>
+                <div class="update-price-wrapper hide">
+                    <select class="update-price-select">
+                        <option value='increase'>Increase</div>
+                        <option value="decrease">Decrease</div>
+                    </select>
+                    by $<input class="update-price-by" value="5" />
+                    <button class="btn btn-primary change-price">Change price</button>
+                </div>
+                <div class="find-replace-wrapper hide">
+                    Find: <input class="find" value="** 6 **">
+                    Replace: <input class="replace" value="** 7 **">
+                    <button class="btn btn-primary go-replace">Go Replace</button>
+                </div>
+                <button class="btn btn-primary update-listing hide">Update Listing</button>
+                <div class="update-color-chart-wrapper hide">
+                    Color chart id: <input class="color-chart-id" value="497105148">
+                    <button class="btn btn-primary update-color-chart">Update color chart</button>
+                </div>
             </div>
         </div>
         <div class="listings"></div>
