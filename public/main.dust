@@ -9,6 +9,8 @@
         <div class="img-selected-id"></div>
         </div>
         <div class="listing-id">Listing Id: {listing_id}</div>
+        <div class="category_path">Category Path: {category_path} / {category_path_ids}</div>
+        <div class="taxonomy_path">Taxonomy Path: {taxonomy_path}</div>
         <div class="price-wrap">
             Price: $<input class="price" value="{price}" /><span class="original">(Original: ${price})</span>
         </div>
